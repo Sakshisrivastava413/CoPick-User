@@ -4,7 +4,7 @@
 }
 
 agm-map {
-  height: 90vh;
+  height: 100vh;
 }
 
 .input-container {
@@ -14,6 +14,10 @@ agm-map {
   ion-item {
     box-shadow: 2px 3px 3px #b3b3b3;
     width: 90vw;
-    margin-bottom: 16px
+    margin-bottom: 16px;
+    ion-label {
+      font-size: 17px;
+      color: rgb(95, 95, 95)
+    }
   }
 }
