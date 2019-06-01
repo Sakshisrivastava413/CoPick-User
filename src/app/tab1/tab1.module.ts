@@ -5,11 +5,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 
+import { AgmCoreModule } from '@agm/core';
+import { API_KEY } from '../app.constants';
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: API_KEY
+    }),
     RouterModule.forChild([{ path: '', component: Tab1Page }])
   ],
   declarations: [Tab1Page]
