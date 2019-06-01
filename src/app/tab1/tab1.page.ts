@@ -9,6 +9,14 @@ export class Tab1Page {
   title: string = 'My first AGM project';
   lat: number = 51.678418;
   lng: number = 7.809007;
-  constructor() {}
+  constructor() {
+    if (navigator)
+    {
+    navigator.geolocation.getCurrentPosition( pos => {
+        this.lng = +pos.coords.longitude;
+        this.lat = +pos.coords.latitude;
+      });
+    }
+  }
 
 }
