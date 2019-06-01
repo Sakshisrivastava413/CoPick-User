@@ -11,6 +11,17 @@ agm-map {
   position: absolute;
   top: 45px;
   left: 5vw;
+  .dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(177, 21, 21);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px
+  }
+  .drop-dot {
+    background-color: rgb(31, 109, 57);
+  }
   ion-item {
     box-shadow: 2px 3px 3px #b3b3b3;
     width: 90vw;
