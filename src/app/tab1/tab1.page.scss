@@ -6,3 +6,13 @@
 agm-map {
   height: 90vh;
 }
+
+.input-container {
+  position: absolute;
+  top: 63px;
+  left: 10%;
+  box-shadow: 2px 3px 3px #b3b3b3;
+  ion-item {
+    width: 80vw;
+  }
+}
