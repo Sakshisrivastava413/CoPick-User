@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-item-details',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemDetailsPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goToSelectDetailPage() {
+    this.router.navigate(['select-item']);
   }
 
 }
