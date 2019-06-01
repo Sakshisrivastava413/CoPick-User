@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { GeocodeService } from "../services/geocode.service";
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: "app-tab1",
@@ -12,7 +13,10 @@ export class Tab1Page {
   lng: number = 7.809007;
   currentAdd: string;
 
-  constructor(private geocode: GeocodeService) {
+  constructor(
+    private geocode: GeocodeService,
+    private router: Router
+    ) {
     if (navigator) {
       navigator.geolocation.getCurrentPosition(pos => {
         this.lng = +pos.coords.longitude;
@@ -22,5 +26,9 @@ export class Tab1Page {
           .then((res: any) => this.currentAdd = res.results[0].formatted_address);
       });
     }
+  }
+
+  goToItemDetailPage() {
+    this.router.navigate(['item-details']);
   }
 }
