@@ -8,23 +8,33 @@
 
 <ion-content>
   <div>
-    <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng" [gestureHandling]="'cooperative'">
+    <agm-map
+      [zoom]="16"
+      [latitude]="lat"
+      [longitude]="lng"
+    >
       <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
     </agm-map>
     <div class="input-container">
       <ion-item>
-        <ion-label position="stacked">Pick Up</ion-label>
+        <ion-label position="stacked">
+          <span class="dot"></span>
+          Pick Up
+        </ion-label>
         <ion-input [(ngModel)]="currentAdd"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Drop At</ion-label>
-        <ion-input></ion-input>
+        <ion-label position="stacked">
+          <span class="dot drop-dot"></span>
+          Drop At
+        </ion-label>
+        <ion-input placeholder="Enter your drop location"></ion-input>
       </ion-item>
     </div>
   </div>
   <ion-fab vertical="center" horizontal="center" slot="fixed">
-      <ion-fab-button>
-        <ion-icon name="arrow-forward"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
+    <ion-fab-button>
+      <ion-icon name="arrow-forward"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
