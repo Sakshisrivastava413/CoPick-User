@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       Tab One
     </ion-title>
@@ -8,7 +8,7 @@
 
 <ion-content>
   <div>
-    <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng">
+    <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng" [gestureHandling]="'cooperative'">
       <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
     </agm-map>
     <div class="input-container">
@@ -17,9 +17,14 @@
         <ion-input></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Pick Up</ion-label>
+        <ion-label position="stacked">Drop At</ion-label>
         <ion-input></ion-input>
       </ion-item>
     </div>
   </div>
+  <ion-fab vertical="center" horizontal="center" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 </ion-content>
