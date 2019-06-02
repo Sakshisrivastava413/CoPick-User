@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { GeocodeService } from "../services/geocode.service";
-import { Route, Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: "app-tab1",
@@ -15,7 +15,7 @@ export class Tab1Page {
 
   constructor(
     private geocode: GeocodeService,
-    private router: Router
+    private router: NavController
     ) {
     if (navigator) {
       navigator.geolocation.getCurrentPosition(pos => {
@@ -29,6 +29,6 @@ export class Tab1Page {
   }
 
   goToItemDetailPage() {
-    this.router.navigate(['item-details']);
+    this.router.navigateForward(['item-details']);
   }
 }
